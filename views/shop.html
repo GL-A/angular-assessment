@@ -1,26 +1,26 @@
-<div class="product-grid__item   grid__item one-half large--one-third" >
+<div class="product-grid__item   grid__item one-half large--one-third" ng-repeat="p in products">
 
     <!--Repeat over your data and display it below -->
-
     <!--Product skeleton-->
         <!--Product Image-->
         <!--Product Image click collapse the image-->
-        <a class="product-grid__product" >
-            <img class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+        <a class="product-grid__product" ng-click="showme=true" ng-hide="showme" >
+            <img class="product-grid__img"  src="{{p.image}}" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
         </a>
-        <a class="product-grid__product">
+        <a class="product-grid__product" ng-show="showme" ng-click="showme=false">
             show image
         </a>
 
         <!--Product Meta-->
-        <div class="product-grid__meta">
+        <div class="product-grid__meta" ui-sref="details({id: p.id})">
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
+              {{p.title}}
             <h3 class="product-grid__name"><a><!--Title--></a></h3>
-            
+              {{p.desc}}
             <!--Product Description-->
             <h4 class="product-grid__sub"><!--Desc--></h4>
-
+              {{p.price}}
             <!--Product Price-->
             <div class="product-grid__price"><!--Price--></div>
         </div>
