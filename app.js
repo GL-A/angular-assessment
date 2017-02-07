@@ -4,7 +4,7 @@ angular.module('app', ['ui.router']).config(function($stateProvider, $urlRouterP
 
   $stateProvider
   .state('home', {
-    url: './',
+    url: '/',
     templateUrl: './views/home.html'
   })
   .state('shop', {
