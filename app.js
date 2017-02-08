@@ -4,8 +4,9 @@ angular.module('app', ['ui.router']).config(function($urlRouterProvider, $stateP
 
   $stateProvider
   .state('home', {
-    templateUrl: './views/home.html',
-    url: './'
+    url: '/',
+    templateUrl: './views/home.html'
+
   })
   .state('shop', {
     templateUrl: './views/shop.html',
