@@ -1,9 +1,12 @@
         <!--Product Image-->
         <!--Product Image click collapse the image-->
-        <!-- <a class="product-grid__product" >
-            <img class="product-grid__img"   sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt="">
+
+
+
+   <a class="product-grid__product" >
+            <img class="product-grid__img"  src="{{plz.image}}" sizes="(min-width: 960px) 33vw, (min-width: 769px) 50vw, 100vw" alt=""></img>
         </a>
-        <a class="product-grid__product">
+        <a class="product-grid__product" ">
             show image
         </a>
 
@@ -11,12 +14,12 @@
         <div class="product-grid__meta">
             <!--Title click Should redirect to the product-details section. remember to pass along the product id so you can make an api call
         to get the specific product details-->
-        {{p.desc}}
-            <h3 class="product-grid__name"><a><!--Title--></a></h3>
-
+        {{plz.title}}
+            <h3 class="product-grid__name"><a>Title</a></h3>
+                {{plz.desc}}
             <!--Product Description-->
-            <h4 class="product-grid__sub"><!--Desc--></h4>
-
+            <h4 class="product-grid__sub">Desc</h4>
+              {{plz.price}}
             <!--Product Price-->
-            <div class="product-grid__price"><!--Price--></div>
-        </div> -->
+            <div class="product-grid__price">Price</div>
+        </div>
